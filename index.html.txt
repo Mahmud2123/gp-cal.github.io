@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <div id="cont2">
+  <h1>GP Grade Calculator</h1>
+  <table border="1"> 
+<tr>
+  <th id="wide">Course Code</th>
+  <th>Course Unit</th>
+    <th>Grade</th>
+  </tr>
+  <tr>
+    <td> <input id="code" type="text"  value="GSP1201"> </input></td>
+      <td> <select id="unit" >
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      </td>
+      <td> <select id="grade"> 
+        <option value="">A</option>
+        <option value="">B</option>
+        <option value="">C</option>
+        <option value="">D</option>
+        <option value="">E</option>
+      </td>
+  </tr>
+  <tr>
+  <td> <input id="code" type="text" value="GSP1203"> </td>
+  <td> <select id="unit" >
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    </select>
+  </td>
+  <td> <select id="grade"> 
+<option value="">A</option>
+<option value="">B</option>
+<option value="">C</option>
+<option value="">D</option>
+<option value="">E</option>
+
+  </td>
+  </tr>
+  </table>
+  <div id="cont3">
+    <button id="btn-cal">Calculate</button>
+    <h1>CGPA: <input id="result" type="number"> </h1>
+  </div>
+</div>
+<script type="javascript" src="index.js"></script>
+</body>
+</html>

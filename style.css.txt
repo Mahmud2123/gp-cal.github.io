@@ -1,0 +1,68 @@
+body{
+background:aliceblue;
+}
+#cont2{
+  width: 100%;
+  text-align: center;
+}
+table{
+  background:green;
+  width:100%;
+}
+@media (max-width: 760x) {
+  table {
+    font-size: 10px;
+    width: 100%;
+  }
+  
+  td {
+    padding: 5px;
+  }
+}
+/* For mobile phones */
+@media (max-width: 767px) {
+  table {
+    overflow-y: auto;
+  }
+}
+
+#cont3{
+  width: 60vh;
+  text-align: center;
+  padding:2vh;
+}
+#btn-cal{
+  background: green;
+  color:whitesmoke;
+  border-radius: 5px;
+  width: 50%;
+  height: 7vh;
+  font-size: large;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+#result{
+  background: white;
+  width: 15%;
+  height: 7vh;
+  border-radius: 5px;
+  border-color: blue;
+  font-size: x-large;
+  font-weight: bolder;
+}
+#code{
+   width: 30vh;
+   text-align: center;
+   font-size: large;
+   font-weight: bold;
+}
+#unit{
+  width:10vh;
+  font-weight: bold;
+  font-size: large;
+}
+#grade{
+  width:15vh;
+  font-weight: bold;
+  font-size:large ;
+}
