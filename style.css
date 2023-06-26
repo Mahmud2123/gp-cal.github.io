@@ -19,7 +19,7 @@ table{
   background:green;
   width:100%;
 }
-@media (max-width: 760x) {
+@media (max-width: 992px) {
   table {
     font-size: 10px;
     width: 100%;
@@ -37,6 +37,7 @@ table{
     overflow-y: auto;
     font-size:13px;
     width:30%;
+    background:lightgreen;
   }
 }
 
