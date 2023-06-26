@@ -7,7 +7,7 @@ background:aliceblue;
 
 @media (min-width: 600px) {
   #cont1 {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -23,6 +23,8 @@ table{
   table {
     font-size: 10px;
     width: 100%;
+    background:grey;
+    
   }
   
   td {
@@ -33,6 +35,8 @@ table{
 @media (max-width: 767px) {
   table {
     overflow-y: auto;
+    font-size:13px;
+    width:80%;
   }
 }
 
