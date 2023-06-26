@@ -12,10 +12,15 @@ var grade5 = parseFloat(document.getElementById("grade5").value);
 
 document.getElementById("btn-cal").addEventListener("click", ()=>{
   var totalUnits = unit1 + unit2 + unit3 + unit4;
+  var unitBox = document.getElementById("totalUnit");
+  unitBox.value = totalUnits
       var totalGrades = (grade1 * unit1) + (grade2 * unit2) + (grade3 * unit3) + (grade4 * unit4) +  (grade5 * unit5) + (grade6 * unit6) + (grade7 * unit7) + (grade8 * unit8) + (grade9 * unit9) + (grade10 * unit10);
-var gpa = totalGrades / totalUnits;
+      var gradeBox = document.getElementById("totalGrade");
+gradeBox.value = totalGrades
+  
+  var gpa = totalGrades / totalUnits;
 
       var result = document.getElementById("result");
-      result.value = "GPA: " + gpa.toFixed(2); 
+      result.value = gpa.toFixed(2); 
 
 });
