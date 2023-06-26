@@ -1,24 +1,23 @@
-var unit0 = parseFloat(document.getElementById("unit0").value);
-var grade1 = parseFloat(document.getElementById("grade1").value);
-var unit1 = parseFloat(document.getElementById("unit1").value);
-var grade2 = parseFloat(document.getElementById("grade2").value);
-var unit2 = parseFloat(document.getElementById("unit2").value);
-var grade3 = parseFloat(document.getElementById("grade3").value);
-var unit3 = parseFloat(document.getElementById("unit3").value);
-var grdae4 = parseFloat(document.getElementById("grade4").value);
-var unit4 = parseFloat(document.getElementById("unit4").value);
-var grade5 = parseFloat(document.getElementById("grade5").value);
+var selectUnit1 = parseFloat(document.getElementById("unit1").value);
+var selectUnit2 = parseFloat(document.getElementById("unit2").value);
+var selectUnit3 = parseFloat(document.getElementById("unit3").value);
+var selectUnit4 = parseFloat(document.getElementById("unit4").value);
+var selectGrade5 = parseFloat(document.getElementById("grade5").value);
+var selectGrade1 = parseFloat(document.getElementById("grade1").value);
+var selectGrade2 = parseFloat(document.getElementById("grade2").value);
+var selectGrade3 = parseFloat(document.getElementById("grade3").value);
+var selectGrade4 = parseFloat(document.getElementById("grade4").value);
 
 
 document.getElementById("btn-cal").addEventListener("click", ()=>{
-  var totalUnits = unit1 + unit2 + unit3 + unit4;
+  var totalUnits = selectUnit1 + selectUnit2 + selectUnit3 + selectUnit4;
   var unitBox = document.getElementById("totalUnit");
   unitBox.value = totalUnits
-      var totalGrades = (grade1 * unit1) + (grade2 * unit2) + (grade3 * unit3) + (grade4 * unit4) +  (grade5 * unit5) + (grade6 * unit6) + (grade7 * unit7) + (grade8 * unit8) + (grade9 * unit9) + (grade10 * unit10);
-      var gradeBox = document.getElementById("totalGrade");
-gradeBox.value = totalGrades
-  
-  var gpa = totalGrades / totalUnits;
+      var totalGrades =  selectGrade1 + selectGrade2 + selectGrade3 + selectGrade4 + selectGrade5
+var gradeBox = document.getElementById("totalGrade");
+  gradeBox.value = totalGrades
+  var UnitGrade = totalUnits * totalGrades
+  var gpa = UnitGrade / totalUnits;
 
       var result = document.getElementById("result");
       result.value = gpa.toFixed(2); 
