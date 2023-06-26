@@ -32,11 +32,11 @@ table{
   }
 }
 /* For mobile phones */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   table {
     overflow-y: auto;
     font-size:13px;
-    width:80%;
+    width:50%;
   }
 }
 
