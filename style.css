@@ -1,13 +1,9 @@
 body{
 background:aliceblue;
 }
-#cont1 {
-  width: 100%;
-}
-
 @media (min-width: 600px) {
   #cont1 {
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -18,13 +14,13 @@ background:aliceblue;
 @media (max-width: 992px) {
   table {
     font-size: 10px;
-    width: 100%;
+    width: 70%;
     background:green;
     
   }
   
   td {
-    padding: 5px;
+    padding: 4px;
   }
 }
 /* For mobile phones */
@@ -37,7 +33,7 @@ background:aliceblue;
 }
 
 #cont3{
-  width: 60vh;
+  width: 80%;
   text-align: center;
   padding:2vh;
 }
@@ -62,17 +58,17 @@ background:aliceblue;
 }
 #code{
    width: 30vh;
-  text-align:cente;
+  text-align:center;
    font-size: large;
    font-weight: bold;
 }
 #unit{
-  width:12vh;
+  width:11vh;
   font-weight: bold;
   font-size: 20px;
 }
 #grade{
-  width:15vh;
+  width:13vh;
   font-weight: bold;
-  font-size:large ;
+  font-size:20px ;
 }
