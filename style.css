@@ -15,15 +15,11 @@ background:aliceblue;
   width: 100%;
   text-align: center;
 }
-table{
-  background:green;
-  width:100%;
-}
 @media (max-width: 992px) {
   table {
     font-size: 10px;
     width: 100%;
-    background:grey;
+    background:green;
     
   }
   
@@ -34,7 +30,6 @@ table{
 /* For mobile phones */
 @media (max-width: 600px) {
   table {
-    overflow-y: auto;
     font-size:13px;
     width:30%;
     background:lightgreen;
@@ -47,7 +42,7 @@ table{
   padding:2vh;
 }
 #btn-cal{
-  background: green;
+  background: lightgreen;
   color:whitesmoke;
   border-radius: 5px;
   width: 50%;
@@ -67,14 +62,14 @@ table{
 }
 #code{
    width: 30vh;
-   text-align: center;
+  text-align:cente;
    font-size: large;
    font-weight: bold;
 }
 #unit{
-  width:10vh;
+  width:12vh;
   font-weight: bold;
-  font-size: large;
+  font-size: 20px;
 }
 #grade{
   width:15vh;
