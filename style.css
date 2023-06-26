@@ -3,7 +3,7 @@ background:aliceblue;
 }
 @media (min-width: 600px) {
   #cont1 {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -14,7 +14,7 @@ background:aliceblue;
 @media (max-width: 992px) {
   table {
     font-size: 10px;
-    width: 70%;
+    width: 100%;
     background:green;
     
   }
@@ -27,7 +27,7 @@ background:aliceblue;
 @media (max-width: 600px) {
   table {
     font-size:13px;
-    width:30%;
+    width:45%;
     background:lightgreen;
   }
 }
@@ -36,6 +36,7 @@ background:aliceblue;
   width: 80%;
   text-align: center;
   padding:2vh;
+  background:grey;
 }
 #btn-cal{
   background: green;
