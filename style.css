@@ -30,13 +30,17 @@ background:aliceblue;
     width:45%;
     background:lightgreen;
   }
+  #cont3{
+    width:100%;
+    background:grey;
+  }
 }
 
 #cont3{
   width: 100%;
   text-align: center;
   padding:2vh;
-  background:grey;
+  
 }
 #btn-cal{
   background: green;
@@ -72,4 +76,10 @@ background:aliceblue;
   width:13vh;
   font-weight: bold;
   font-size:20px ;
+}
+#unitgrade{
+  width:13vh;
+  font-weight: bold;
+  font-size:30px ;
+  border:none;
 }
