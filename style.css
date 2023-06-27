@@ -77,7 +77,7 @@ background:aliceblue;
   font-weight: bold;
   font-size:20px ;
 }
-#unitgrade{
+#totalUnit, #totalGrade{
   width:13vh;
   font-weight: bold;
   font-size:30px ;
