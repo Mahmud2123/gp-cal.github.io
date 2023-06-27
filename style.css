@@ -30,15 +30,16 @@ background:aliceblue;
     width:45%;
     background:lightgreen;
   }
-  #cont3{
+  #cont3,#cont2{
     width:100%;
-    background:grey;
+    
   }
 }
 
 #cont3{
   text-align: center;
   padding:3vh;
+  backgroung:tomato;
   
 }
 #btn-cal{
@@ -79,7 +80,7 @@ background:aliceblue;
 }
 #totalUnit, #totalGrade, #total{
   width:13vh;
-  color:#000000 ;
+  color:#0001100 ;
   font-weight: bold;
   font-size:40px ;
   border:none;
