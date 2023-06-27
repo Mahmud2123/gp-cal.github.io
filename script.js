@@ -1,16 +1,19 @@
-var selectUnit1 = parseFloat(document.getElementById("unit1").value);
-var selectUnit2 = parseFloat(document.getElementById("unit2").value);
-var selectUnit3 = parseFloat(document.getElementById("unit3").value);
-var selectUnit4 = parseFloat(document.getElementById("unit4").value);
-var selectGrade5 = parseFloat(document.getElementById("grade5").value);
-var selectGrade1 = parseFloat(document.getElementById("grade1").value);
-var selectGrade2 = parseFloat(document.getElementById("grade2").value);
-var selectGrade3 = parseFloat(document.getElementById("grade3").value);
-var selectGrade4 = parseFloat(document.getElementById("grade4").value);
+var selectUnit = (document.getElementById("unit1");
+
+var selectGrade4 = parseFloat(document.getElementById("grade").value);
 
 
 document.getElementById("btn-cal").addEventListener("click", ()=>{
-  var totalUnits = selectUnit1 + selectUnit2 + selectUnit3 + selectUnit4;
+  var sum = 0;
+  for (var i = 0; i < selectUnit.length; i++) {
+        var value = parseFloat(selectUnit[i].value);
+        if (!isNaN(value)) {
+          sum += value;
+          var totalUnits = sum;
+        }
+      }
+
+  
   var unitBox = document.getElementById("totalUnit");
   unitBox.value = totalUnits
       var totalGrades =  selectGrade1 + selectGrade2 + selectGrade3 + selectGrade4 + selectGrade5
