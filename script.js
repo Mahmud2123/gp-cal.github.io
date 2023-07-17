@@ -1,39 +1,64 @@
-// Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Get the table element
-  var table = document.getElementById('grade-table');
+  var semesterTable = document.getElementById('semester-table');
+  var addRowButton = document.getElementById('add-row-button');
+  var semesterUnitSelects;
+  var semesterGradeSelects;
 
-  // Get all the course unit and grade select elements
-  var unitSelects = table.getElementsByClassName('course-unit');
-  var gradeSelects = table.getElementsByClassName('grade');
-
-  // Populate the course unit and grade select elements
-  populateUnitSelects(unitSelects, 1, 3); // Populate with units from 0 to 4
-  populateGradeSelects(gradeSelects, [ 'A', 'B', 'C', 'D', 'E']); // Populate with letter grades
-
-  // Get the Calculate and Clear buttons, and result input element
-  var calculateBtn = document.getElementById('btn-cal');
-  var clearBtn = document.getElementById('btn-clear');
-  var resultInput = document.getElementById('result');
-
-  // Add event listener to the Calculate button
-  calculateBtn.addEventListener('click', function() {
-    calculateCGPA();
+  // Add event listener to the Add Row button
+  addRowButton.addEventListener('click', function() {
+    addRow();
   });
 
-  // Add event listener to the Clear button
-  clearBtn.addEventListener('click', function() {
-    clearSelections();
+  // Function to add a new row to the semester table
+  function addRow() {
+    var newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td class="course-code">
+        <input type="text" class="course-code-input" placeholder="Course Code">
+      </td>
+      <td>
+        <select class="course-unit">
+          <option value="">Unit:</option>
+        </select>
+      </td>
+      <td>
+        <select class="grade">
+          <option>Grade:</option>
+        </select>
+      </td>
+    `;
+
+    semesterTable.appendChild(newRow);
+
+    semesterUnitSelects = semesterTable.getElementsByClassName('course-unit');
+    semesterGradeSelects = semesterTable.getElementsByClassName('grade');
+
+    populateUnitSelects(semesterUnitSelects, 1, 3); // Populate with units from 0 to 4
+    populateGradeSelects(semesterGradeSelects, ['A', 'B', 'C', 'D', 'E']); // Populate with letter grades
+  }
+
+  var semesterCalculateBtn = document.getElementById('semester-btn-cal');
+  var semesterClearBtn = document.getElementById('semester-btn-clear');
+  var semesterResultInput = document.getElementById('semester-result');
+
+  // Add event listener to the Semester Calculate button
+  semesterCalculateBtn.addEventListener('click', function() {
+    calculateSGPA();
   });
 
-  // Function to calculate the CGPA
-  function calculateCGPA() {
+  // Add event listener to the Semester Clear button
+  semesterClearBtn.addEventListener('click', function() {
+    clearSemesterSelections();
+  });
+
+  // Function to calculate the SGPA
+  function calculateSGPA() {
     var totalGradePoints = 0;
     var totalUnits = 0;
 
-    for (var i = 0; i < unitSelects.length; i++) {
-      var unit = parseInt(unitSelects[i].value);
-      var grade = gradeToPoints(gradeSelects[i].value);
+    for (var i = 0; i < semesterUnitSelects.length; i++) {
+      var unit = parseInt(semesterUnitSelects[i].value);
+      var grade = gradeToPoints(semesterGradeSelects[i].value);
 
       if (!isNaN(unit) && !isNaN(grade)) {
         totalGradePoints += unit * grade;
@@ -41,20 +66,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    var cgpa = totalGradePoints / totalUnits;
+    var sgpa = totalGradePoints / totalUnits;
 
-    // Display the CGPA in the result input
-    resultInput.value = cgpa.toFixed(2);
+    // Display the SGPA in the result input
+    semesterResultInput.value = sgpa.toFixed(2);
   }
 
-  // Function to clear all selections and result
-  function clearSelections() {
-    for (var i = 0; i < unitSelects.length; i++) {
-      unitSelects[i].selectedIndex = 0; // Set unit select to the first option
-      gradeSelects[i].selectedIndex = 0; // Set grade select to the first option
+  // Function to clear all semester selections and result
+  function clearSemesterSelections() {
+    while (semesterTable.rows.length > 1) {
+      semesterTable.deleteRow(1);
     }
 
-    resultInput.value = ''; // Clear the result input
+    semesterResultInput.value = ''; // Clear the result input
   }
 
   // Function to populate unit select elements with options
