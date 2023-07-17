@@ -2,6 +2,26 @@ body {
   background: aliceblue;
 }
 
+#grade-calculator-button,
+#semester-calculator-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#grade-calculator-button:hover,
+#semester-calculator-button:hover {
+  background-color: #45a049;
+}
+
+#grade-calculator-button:focus,
+#semester-calculator-button:focus {
+  outline: none;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -12,20 +32,24 @@ h1 {
   text-align: center;
 }
 
-#grade-table {
+#grade-table,
+#semester-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
 #grade-table th,
-#grade-table td {
+#grade-table td,
+#semester-table th,
+#semester-table td {
   padding: 10px;
   text-align: center;
   border: 1px solid #ccc;
 }
 
-#grade-table th {
+#grade-table th,
+#semester-table th {
   background-color: #f2f2f2;
 }
 
@@ -39,8 +63,21 @@ h1 {
   box-sizing: border-box;
   margin-bottom: 10px;
 }
+
+.course-code-input {
+  width: 90%;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 #btn-cal,
-#btn-clear {
+#btn-clear,
+#semester-btn-cal,
+#semester-btn-clear,
+#add-row-button {
   background: green;
   color: white;
   border: none;
@@ -49,12 +86,16 @@ h1 {
   font-size: 16px;
   cursor: pointer;
 }
-#btn-clear{
-  background:red;
+#btn-clear,
+#semester-btn-clear {
+  background: red;
 }
 
 #btn-cal:hover,
-#btn-clear:hover {
+#btn-clear:hover,
+#semester-btn-cal:hover,
+#semester-btn-clear:hover,
+#add-row-button:hover {
   background: darkgreen;
 }
 
@@ -67,11 +108,11 @@ h1 {
   margin-top: 20px;
 }
 
-#result {
+#result,
+#semester-result {
   width: 50px;
   height: 25px;
   padding: 5px;
   font-size: 18px;
   text-align: center;
 }
-
