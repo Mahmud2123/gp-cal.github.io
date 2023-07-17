@@ -1,87 +1,77 @@
-body{
-background:aliceblue;
-}
-@media (min-width: 600px) {
-  #cont1 {
-    width: 100%;
-  }
+body {
+  background: aliceblue;
 }
 
-#cont2{
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#grade-table {
   width: 100%;
-  text-align: center;
-}
-@media (max-width: 992px) {
-  table {
-    font-size: 10px;
-    width: 100%;
-    background:#001100;
-    
-  }
-  
-  td {
-    padding: 4px;
-  }
-}
-/* For mobile phones */
-@media (max-width: 600px) {
-  table {
-    font-size:13px;
-    width:45%;
-    background:lightgreen;
-  }
-  #cont3,#cont2{
-    width:100%;
-    
-  }
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
-#cont3{
+#grade-table th,
+#grade-table td {
+  padding: 10px;
   text-align: center;
-  padding:3vh;
-  backgroung:tomato;
-  
+  border: 1px solid #ccc;
 }
-#btn-cal{
+
+#grade-table th {
+  background-color: #f2f2f2;
+}
+
+.course-unit,
+.grade {
+  width: 90%;
+  padding: 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+#btn-cal,
+#btn-clear {
   background: green;
-  color:whitesmoke;
+  color: white;
+  border: none;
   border-radius: 5px;
-  width: 50%;
-  height: 7vh;
-  font-size: large;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
-#result{
-  background: blue;
-  color:#000000;
-  width: 15%;
-  height: 6vh;
-  border-radius: 5px;
-  border-color: blue;
-  font-size: x-large;
-  font-weight: bolder;
+#btn-clear{
+  background:red;
 }
-#code{
-   width: 30vh;
-  text-align:center;
-   font-size: large;
-   font-weight: bold;
+
+#btn-cal:hover,
+#btn-clear:hover {
+  background: darkgreen;
 }
-#unit{
-  width:13vh;
-  font-weight: bold;
-  font-size: 20px;
+
+.calculate-section {
+  text-align: center;
+  margin-top: 20px;
 }
-#grade{
-  width:13vh;
-  font-weight: bold;
-  font-size:20px ;
+
+.calculate-section h1 {
+  margin-top: 20px;
 }
-#totalUnit, #totalGrade, #total{
-  width:13vh;
-  color:#0001100 ;
-  font-weight: bold;
-  font-size:40px ;
-  border:none;
+
+#result {
+  width: 50px;
+  height: 25px;
+  padding: 5px;
+  font-size: 18px;
+  text-align: center;
 }
+
