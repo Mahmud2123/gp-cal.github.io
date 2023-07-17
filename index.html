@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,127 +9,26 @@
   <link rel="stylesheet" href="style.css">
   <title>GRADE CALCULATOR</title>
 </head>
+ 
 <body>
-  <div class="container">
-    <h1>GRADE CALCULATOR</h1>
-    <table id="grade-table">
+  <div id="semester-calculator" class="container">
+    <h1>SEMESTER CALCULATOR</h1>
+    <table id="semester-table">
       <tr>
         <th>Course Code</th>
         <th>Course Unit</th>
         <th>Grade</th>
       </tr>
-      <tr>
-        <td class="course-code">GSP1201</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">GSP1203</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">CSC1301</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">MTH1201</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">MTH1301</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">PHY1101</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">PHY1201</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td class="course-code">PHY1203</td>
-        <td>
-          <select class="course-unit">
-            <option value="">Unit:</option>
-          </select>
-        </td>
-        <td>
-          <select class="grade">
-            <option>Grade:</option>
-          </select>
-        </td>
-      </tr>
-      <!-- Add more rows for additional courses -->
+      <!-- Add rows dynamically using JavaScript -->
     </table>
-     <div class="calculate-section">
-             <h1>CGPA: <input id="result" type="number"></h1>
-      <button id="btn-cal">Calculate</button>
-      <button id="btn-clear">Clear</button>
+    <button id="add-row-button">Add Row</button>
+    <div class="calculate-section">
+      <h1>SGPA: <input id="semester-result" type="number"></h1>
+      <button id="semester-btn-cal">Calculate</button>
+      <button id="semester-btn-clear">Clear</button>
     </div>
   </div>
+  
   <script src="script.js" type="text/JavaScript"></script>
 </body>
 </html>
