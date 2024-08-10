@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var newRow = document.createElement('tr');
     newRow.innerHTML = `
       <td class="course-code">
-        <input type="text" class="course-code-input" placeholder="Course Code">
+        <input type="text" class="course-code-input" placeholder="Course Code" disabled>
       </td>
       <td>
         <select class="course-unit">
